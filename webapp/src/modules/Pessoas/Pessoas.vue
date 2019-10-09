@@ -16,6 +16,8 @@ export default {
   
   async created() {
     const {data} = await service.getPessoas(); 
+    // eslint-disable-next-line quotes
+    console.log(data);
   },
   
   methods: {}
