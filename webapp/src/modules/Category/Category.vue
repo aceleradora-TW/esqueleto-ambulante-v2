@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import service from '@/services/pessoas.service'
+import CategoryService from '@/services/category.service'
 export default {
   name: 'Pessoas',
   props: {},
@@ -15,10 +15,12 @@ export default {
   }),
   
   async created() {
-    const {data} = await service.getPessoas(); 
+    const {data} = await CategoryService.getAll(); 
     // eslint-disable-next-line quotes
     console.log(data);
   },
+
+  mounted() {},
   
   methods: {}
 }

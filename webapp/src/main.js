@@ -9,7 +9,7 @@ import router from './router'
 
 import './assets/scss/config/vendors.scss'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = process.env.NODE_ENV === 'production';
 Vue.use(Vuex)
 Vue.use(icons)
 Vue.use(BootstrapVue)
